@@ -85,9 +85,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:entity_properties"
-                            ],
+                            "enum": ["minecraft:entity_properties"],
                             "title": "Test entity properties",
                             "descriptions": "Test whether an entity describes in 'entity' can pass the predicate described in 'predicate'"
                         },
@@ -103,9 +101,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:entity_scores"
-                            ]
+                            "enum": ["minecraft:entity_scores"]
                         },
                         "entity": {
                             "$ref": "#/definitions/entity"
@@ -124,9 +120,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:random_chance"
-                            ],
+                            "enum": ["minecraft:random_chance"],
                             "title": "Random Chance",
                             "description": "A random chance (ignoring looting) that the condition will pass"
                         },
@@ -144,9 +138,7 @@
                     "properties": {
                         "condition": {
                             "type": "string",
-                            "enum": [
-                                "minecraft:random_chance_with_looting"
-                            ],
+                            "enum": ["minecraft:random_chance_with_looting"],
                             "title": "Looting Chance",
                             "description": "A random chance taking looting into account that the condition will pass"
                         },
@@ -168,9 +160,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:killed_by_player"
-                            ],
+                            "enum": ["minecraft:killed_by_player"],
                             "description": "This condition will pass only if the mob was killed by a player, unless the 'inverse' condition is set"
                         },
                         "inverse": {
@@ -184,9 +174,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:block_state_property"
-                            ],
+                            "enum": ["minecraft:block_state_property"],
                             "description": "Check properties of block state"
                         },
                         "block": {
@@ -208,9 +196,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:damage_source_properties"
-                            ],
+                            "enum": ["minecraft:damage_source_properties"],
                             "description": "Checks damage source"
                         },
                         "predicate": {
@@ -222,9 +208,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:location_check"
-                            ],
+                            "enum": ["minecraft:location_check"],
                             "description": "Checks location"
                         },
                         "predicate": {
@@ -236,9 +220,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:match_tool"
-                            ],
+                            "enum": ["minecraft:match_tool"],
                             "description": "Checks tool (available for block breaking and fishing)"
                         },
                         "predicate": {
@@ -250,9 +232,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:survives_explosion"
-                            ],
+                            "enum": ["minecraft:survives_explosion"],
                             "description": "Return true with 1/explosion radius probability"
                         }
                     }
@@ -261,9 +241,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:table_bonus"
-                            ],
+                            "enum": ["minecraft:table_bonus"],
                             "description": "Passes with probability picked from table, indexed by enchantment level"
                         },
                         "enchantment": {
@@ -285,9 +263,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:weather_check"
-                            ],
+                            "enum": ["minecraft:weather_check"],
                             "description": "Check the weather"
                         },
                         "raining": {
@@ -306,9 +282,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:alternative"
-                            ],
+                            "enum": ["minecraft:alternative"],
                             "description": "Joins conditions from parameter terms with 'or' ('disjunction')"
                         },
                         "terms": {
@@ -321,9 +295,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "condition": {
-                            "enum": [
-                                "minecraft:inverted"
-                            ],
+                            "enum": ["minecraft:inverted"],
                             "description": "Inverts condition from parameter term"
                         },
                         "term": {
@@ -333,34 +305,23 @@
                     }
                 }
             ],
-            "required": [
-                "condition"
-            ]
+            "required": ["condition"]
         },
         "entity": {
             "title": "Entity to test",
             "description": "'this' for the entity which died to make the loot table, 'killer' for the entity which killed the entity, and 'killer_player' for the player who killed the entity (if it exists)",
-            "enum": [
-                "this",
-                "killer",
-                "killer_player"
-            ]
+            "enum": ["this", "killer", "killer_player"]
         },
         "function": {
             "title": "Function",
             "description": "This is a function which changes the properties of an item",
-            "required": [
-                "function"
-            ],
+            "required": ["function"],
             "oneOf": [
                 {
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_count",
-                                "set_count"
-                            ],
+                            "enum": ["minecraft:set_count", "set_count"],
                             "title": "Set Number",
                             "description": "Set the 'count' of the items. Can be either an integer or a range. If it is a range it is set randomly within that range"
                         },
@@ -374,10 +335,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_damage",
-                                "set_damage"
-                            ],
+                            "enum": ["minecraft:set_damage", "set_damage"],
                             "title": "Set durability %",
                             "description": "Sets the percentage of the maximum durability"
                         },
@@ -391,10 +349,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_nbt",
-                                "set_nbt"
-                            ],
+                            "enum": ["minecraft:set_nbt", "set_nbt"],
                             "title": "Set nbt",
                             "description": "A function to set the 'tag' nbt of the item to the value specified in 'nbt'"
                         },
@@ -541,9 +496,7 @@
                             "description": "Whether the enchantment can include treasure enchantments (such as mending and frost walker)"
                         }
                     },
-                    "required": [
-                        "levels"
-                    ]
+                    "required": ["levels"]
                 },
                 {
                     "additionalProperties": false,
@@ -659,10 +612,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_name",
-                                "set_name"
-                            ],
+                            "enum": ["minecraft:set_name", "set_name"],
                             "title": "Set name",
                             "description": "Add display name of the item"
                         },
@@ -680,10 +630,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_lore",
-                                "set_lore"
-                            ],
+                            "enum": ["minecraft:set_lore", "set_lore"],
                             "title": "Set lore",
                             "description": "Add display lore of the item"
                         },
@@ -727,9 +674,7 @@
                         {
                             "properties": {
                                 "formula": {
-                                    "enum": [
-                                        "binomial_with_bonus_count"
-                                    ],
+                                    "enum": ["binomial_with_bonus_count"],
                                     "description": "Add random value using binomial distribution with n <- level + extraRounds and p <- probabilty"
                                 },
                                 "parameters": {
@@ -748,9 +693,7 @@
                         {
                             "properties": {
                                 "formula": {
-                                    "enum": [
-                                        "uniform_bonus_count"
-                                    ],
+                                    "enum": ["uniform_bonus_count"],
                                     "description": "Add random value using uniform distribution from 0 to bonusMultiplier * level"
                                 },
                                 "parameters": {
@@ -766,9 +709,7 @@
                         {
                             "properties": {
                                 "formula": {
-                                    "enum": [
-                                        "ore_drops"
-                                    ],
+                                    "enum": ["ore_drops"],
                                     "description": "Apply formula count * (max(0, random(0..1) - 1) + 1)"
                                 },
                                 "parameters": {
@@ -779,10 +720,7 @@
                     ],
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:apply_bonus",
-                                "apply_bonus"
-                            ],
+                            "enum": ["minecraft:apply_bonus", "apply_bonus"],
                             "title": "Apply bonus",
                             "description": "Apply one of predefined bonus formulas"
                         },
@@ -800,17 +738,12 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:copy_name",
-                                "copy_name"
-                            ],
+                            "enum": ["minecraft:copy_name", "copy_name"],
                             "title": "Copy name",
                             "description": "Copy display name from block entity to item"
                         },
                         "source": {
-                            "enum": [
-                                "block_entity"
-                            ]
+                            "enum": ["block_entity"]
                         }
                     }
                 },
@@ -818,18 +751,13 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:copy_nbt",
-                                "copy_nbt"
-                            ],
+                            "enum": ["minecraft:copy_nbt", "copy_nbt"],
                             "title": "Copy NBT",
                             "description": "Copy nbt from the source to the target"
                         },
                         "source": {
                             "$ref": "#/definitions/entity",
-                            "enum": [
-                                "block_entity"
-                            ]
+                            "enum": ["block_entity"]
                         },
                         "ops": {
                             "type": "array",
@@ -847,11 +775,7 @@
                                         "title": "Target path"
                                     },
                                     "op": {
-                                        "enum": [
-                                            "replace",
-                                            "append",
-                                            "merge"
-                                        ],
+                                        "enum": ["replace", "append", "merge"],
                                         "title": "Operation method"
                                     }
                                 }
@@ -876,10 +800,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:limit_count",
-                                "limit_count"
-                            ],
+                            "enum": ["minecraft:limit_count", "limit_count"],
                             "title": "Limit count",
                             "description": "Limit count of every item stack to range",
                             "properties": {
@@ -894,10 +815,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "function": {
-                            "enum": [
-                                "minecraft:set_contents",
-                                "set_contents"
-                            ],
+                            "enum": ["minecraft:set_contents", "set_contents"],
                             "title": "Set contents",
                             "description": "Populate BlockEntityTag.Items (works for shulker boxes, chests, etc.) with items from entries"
                         },
@@ -942,16 +860,13 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "item",
-                                "minecraft:item"
-                            ],
+                            "enum": ["item", "minecraft:item"],
                             "title": "Item",
                             "description": "This entry will give an item (if the conditions pass). The item type is defined in \"name\""
                         },
                         "name": {
-                            "$ref": "../shared/item_name.json",
                             "title": "Item",
+                            "type": "string",
                             "description": "The item to give"
                         }
                     }
@@ -960,10 +875,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "loot_table",
-                                "minecraft:loot_table"
-                            ],
+                            "enum": ["loot_table", "minecraft:loot_table"],
                             "title": "Loot table",
                             "description": "This entry will give the result of another loot table specified in 'name'. These cannot be self referencing in any way, if they are self referencing, they don't run"
                         },
@@ -978,10 +890,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "empty",
-                                "minecraft:empty"
-                            ],
+                            "enum": ["empty", "minecraft:empty"],
                             "title": "Empty",
                             "description": "An empty pool. No items will be granted"
                         }
@@ -991,9 +900,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "minecraft:alternatives"
-                            ],
+                            "enum": ["minecraft:alternatives"],
                             "title": "Alternatives",
                             "description": "Tests conditions of child entries and executes first that can run"
                         },
@@ -1009,27 +916,20 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "minecraft:dynamic"
-                            ],
+                            "enum": ["minecraft:dynamic"],
                             "title": "Dynamic",
                             "description": "Gets block specific drops"
                         }
                     },
                     "name": {
-                        "enum": [
-                            "minecraft:self",
-                            "minecraft:contents"
-                        ]
+                        "enum": ["minecraft:self", "minecraft:contents"]
                     }
                 },
                 {
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "minecraft:group"
-                            ],
+                            "enum": ["minecraft:group"],
                             "title": "Group",
                             "description": "Executes child entries when own conditions pass. It behaves as multiple item entries (all with same weight and quality)"
                         },
@@ -1045,9 +945,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "minecraft:sequence"
-                            ],
+                            "enum": ["minecraft:sequence"],
                             "title": "Sequence",
                             "description": "Executes child entries until first one that can't run due to conditions"
                         },
@@ -1063,9 +961,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "type": {
-                            "enum": [
-                                "minecraft:tag"
-                            ],
+                            "enum": ["minecraft:tag"],
                             "title": "Tag",
                             "description": "Adds contents of item tag"
                         },
@@ -1082,9 +978,7 @@
                     }
                 }
             ],
-            "required": [
-                "type"
-            ],
+            "required": ["type"],
             "properties": {
                 "quality": {
                     "type": "number",
