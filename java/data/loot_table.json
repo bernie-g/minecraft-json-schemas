@@ -6,6 +6,9 @@
     "additionalProperties": false,
     "properties": {
         "additionalProperties": false,
+        "name": {
+            "type": "string"
+        },
         "type": {
             "type": "string",
             "title": "Loot table type",
