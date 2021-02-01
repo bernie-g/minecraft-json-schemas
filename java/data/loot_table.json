@@ -6,9 +6,6 @@
     "additionalProperties": false,
     "properties": {
         "additionalProperties": false,
-        "name": {
-            "type": "string"
-        },
         "type": {
             "type": "string",
             "title": "Loot table type",
@@ -36,6 +33,9 @@
             "items": {
                 "additionalProperties": false,
                 "properties": {
+                    "name": {
+                        "type": "string"
+                    },
                     "functions": {
                         "type": "array",
                         "title": "Pool functions",
